@@ -1,14 +1,17 @@
-def twoSum(nums, target):
-    # Create a hash map to store the number and its index
-    num_map = {}
+from typing import List
 
-    # Loop through the list
-    for i, num in enumerate(nums):
-        complement = target - num
+class Solution:
+    def twoSum(self, nums: List[int], target: int) -> List[int]:
+        num_map = {}
+        for i, num in enumerate(nums):
+            complement = target - num
+            if complement in num_map:
+                return[num_map[complement], i]
+            num_map[num] = i
 
-        # If the complement exists in the hash map, return the indices
-        if complement in num_map:
-            return [num_map[complement], i]
+# instance of solution class
+sol = Solution()
 
-        # Otherwise, store the current number with its index
-        num_map[num] = i
+nums = [3, 2, 4]
+target = 6
+print(sol.twoSum(nums, target))
