@@ -32,3 +32,18 @@ class Solution:
 
         # Return the merged list, which starts from dummy.next
         return dummy.next
+
+
+# Creating sample input lists
+list1 = ListNode(1, ListNode(2, ListNode(4)))
+list2 = ListNode(1, ListNode(3, ListNode(4)))
+
+# Merging the lists
+solution = Solution()
+merged_head = solution.mergeTwoLists(list1, list2)
+
+# Printing the merged list
+current = merged_head
+while current:
+    print(current.val, end=" -> ")
+    current = current.next
