@@ -11,7 +11,7 @@ class Solution:
         }
         result = 0
         for i in range(len(s)):
-            if i + 1 < len(s) and roman_values[s[i]] < roman_values[s[i]]:
+            if i + 1 < len(s) and roman_values[s[i]] < roman_values[s[i + 1]]:
                 result -= roman_values[s[i]]
             else:
                 result += roman_values[s[i]]
