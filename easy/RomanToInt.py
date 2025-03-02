@@ -19,3 +19,8 @@ class Solution:
                 result += roman_values[s[i]]
 
         return result
+
+sol = Solution()
+print(sol.romanToInt("III"))
+print(sol.romanToInt("IV"))
+print(sol.romanToInt("IX"))
